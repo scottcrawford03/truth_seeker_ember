@@ -5,5 +5,9 @@ var Router = Ember.Router.extend({
   location: config.locationType
 });
 
+
 export default Router.map(function() {
+  this.resource('truths', {path: '/'}, function() {
+    this.route('show', { path: ':truth_id' });
+  });
 });
