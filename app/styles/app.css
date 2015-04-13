@@ -1,3 +1,8 @@
+.map-canvas {
+  height: 500px;
+  width: 1000px;
+}
+
 @font-face {
     font-family: 'aventurabold';
     src: url('/assets/fonts/Aventura-Bold-webfont.eot');
@@ -55,4 +60,8 @@ body {
   margin-top: 27px;
   width: 70%;
   height: 70%;
+}
+
+.hidden {
+  display: none;
 }
