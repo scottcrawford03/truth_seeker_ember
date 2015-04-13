@@ -10,7 +10,7 @@ export default Ember.Component.extend({
         "elementType": "all",
         "stylers": [
           {
-            "hue": "#001204"
+            "hue": "#191919"
           },
           {
             "saturation": 100
