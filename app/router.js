@@ -8,6 +8,6 @@ var Router = Ember.Router.extend({
 
 export default Router.map(function() {
   this.resource('truths', {path: '/'}, function() {
-    this.route('show', { path: ':truth_id' });
+    this.resource('truth', { path: ':truth_id' });
   });
 });
