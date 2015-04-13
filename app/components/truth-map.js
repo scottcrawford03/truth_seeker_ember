@@ -31,7 +31,8 @@ export default Ember.Component.extend({
   updateTruths: function () {
     let markers = this.get('markers');
     let truths = this.get('truths');
-  }.on('truths'),
+    this.renderTruths();
+  }.observes('truths'),
 
   placeTruthMarker: function (truth) {
     let marker = new google.maps.Marker({
