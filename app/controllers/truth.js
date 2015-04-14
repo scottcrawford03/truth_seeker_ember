@@ -4,6 +4,10 @@ export default Ember.Controller.extend({
 
   searchTerm: '',
 
+  category: function () {
+    return this.get('model.firstObject.category')
+  }.property('model'),
+
   matchingPosts: function () {
     let searchTerm = this.get('searchTerm').toLowerCase();
     if (searchTerm) {

@@ -1,1 +1,20 @@
-{{outlet}}
+<div class="row">
+  <div class="col-xs-2 images">
+    {{#each model as |category|}}
+    {{#link-to 'truth' category.name}}
+    <div class="category-image-container">
+      <img class="{{category.name}}-image category-image" src="/assets/images/{{category.name}}.png"/>
+    </div>
+    {{/link-to}}
+    {{/each}}
+  </div>
+  <div class="col-xs-10 header text-center">
+  {{#link-to 'truths'}}
+    <h1 id="title">TRUTH SEEKER</h1>
+    <h4 id="tagline">THE PEOPLE NEED TO KNOW</h4>
+  {{/link-to}}
+  <div class="text-left">
+    {{outlet}}
+  </div>
+  </div>
+</div>

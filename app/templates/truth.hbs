@@ -1,7 +1,10 @@
-{{truth-map latitude="39.8282" longitude="-98.5795" truths=matchingPosts}}
+{{truth-map latitude="37.8282" longitude="-98.5795" truths=matchingPosts category=category}}
 
-{{input type="text" value=searchTerm}}
 
-{{#each matchingPosts as |post|}}
-  {{truth-post post=post}}
-{{/each}}
+<div class="truth-posts">
+  <h1>{{category}}</h1>
+  {{input type="text" class="filter-search" value=searchTerm}}
+  {{#each matchingPosts as |post|}}
+    {{truth-post post=post}}
+  {{/each}}
+</div>

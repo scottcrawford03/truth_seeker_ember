@@ -43,12 +43,20 @@ export default Ember.Component.extend({
   }.observes('truths'),
 
   placeTruthMarker: function (truth) {
+    let icon = {
+      url: `/assets/images/${this.get('category').toLowerCase()}.png`,
+      scaledSize: new google.maps.Size(25,30),
+      origin: null,
+      anchor: null,
+    };
+
     let marker = new google.maps.Marker({
       position: new window.google.maps.LatLng(
           truth.get('lat'),
           truth.get('long')),
       map: this.get('map'),
-      title: truth.get('text')
+      title: truth.get('text'),
+      icon: icon
     });
     this.markers.pushObject(marker);
   },
