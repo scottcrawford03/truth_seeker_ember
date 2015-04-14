@@ -1,6 +1,11 @@
 .map-canvas {
-  height: 500px;
-  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 375px;
+  width: 900px;
+  border: 2px white solid;
+  border-radius: 50px;
+  box-shadow: 0px 0px 40px yellowgreen;
 }
 
 @font-face {
@@ -23,11 +28,7 @@ body {
 
 .header {
   font-family: 'aventurabold';
-  text-align: center;
-  margin-top: -20px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+  margin-top: -15px;
 }
 
 #title {
@@ -39,29 +40,64 @@ body {
 #tagline {
   color: #66CD00;
   font-size: 20px;
-  margin-top: -30px;
 }
 
-.images{
-  margin-top: 150px;
-}
-
-.bigfoot-image-container{
-  margin-left: 100px;
+.category-image-container{
+  margin-left: 50px;
+  margin-top: 10px;
   text-align: center;
   border: 2px solid #66CD00;
   border-radius: 500px;
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   background-color: white;
 }
 
-.bigfoot-image{
+.category-image{
   margin-top: 27px;
-  width: 70%;
-  height: 70%;
+  width: 60%;
+  height: 60%;
+}
+
+.tupac-image{
+  width: 40%;
+  height: 60%;
+}
+
+.active .category-image-container {
+  border: 2px solid yellowgreen;
+  box-shadow: 0px 0px 40px yellowgreen;
+  background-color: #66CD00;
+}
+
+.category-image-container:hover{
+  border: 2px solid white;
+  box-shadow: 0px 0px 40px white;
+  background-color: #66CD00;
 }
 
 .hidden {
   display: none;
+}
+
+.truth-posts{
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+}
+
+.filter-search{
+  padding-left: 5px;
+  outline: none;
+  border-radius: 30px;
+  width: 300px;
+}
+
+.filter-search:active{
+  outline: none;
+}
+
+.filter-search:focus{
+  outline: none;
 }
