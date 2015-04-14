@@ -13,7 +13,15 @@ export default Ember.Component.extend({
           this.get("longitude")),
       zoom: 4,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
-      styles: this.styles
+      styles: this.styles,
+      zoomControl: true,
+      zoomControlOptions: {
+        style: google.maps.ZoomControlStyle.MEDIUM,
+        position: google.maps.ControlPosition.LEFT_CENTER
+      },
+      mapTypeControl: false,
+      scaleControl: true,
+      streetViewControl: true,
     };
 
     this.set('map', new window.google.maps.Map(container, options));
@@ -51,13 +59,7 @@ export default Ember.Component.extend({
       "elementType": "all",
       "stylers": [
         {
-          "hue": "#191919"
-        },
-        {
-          "saturation": 100
-        },
-        {
-          "lightness": -95
+          "color": "#191919"
         },
         {
           "visibility": "on"

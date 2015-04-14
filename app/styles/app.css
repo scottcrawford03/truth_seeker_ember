@@ -1,6 +1,10 @@
 .map-canvas {
+  margin-left: auto;
+  margin-right: auto;
   height: 500px;
   width: 1000px;
+  border: 2px white solid;
+  border-radius: 50px;
 }
 
 @font-face {
