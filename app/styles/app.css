@@ -1,6 +1,7 @@
 .map-canvas {
+  margin-top: 50px;
   height: 500px;
-  width: 1000px;
+  width: 900px;
 }
 
 @font-face {
@@ -39,27 +40,37 @@ body {
 #tagline {
   color: #66CD00;
   font-size: 20px;
-  margin-top: -30px;
 }
 
 .images{
-  margin-top: 150px;
+  margin-top: 20px;
 }
 
-.bigfoot-image-container{
-  margin-left: 100px;
+.category-image-container{
+  margin-left: 50px;
+  margin-top: 10px;
   text-align: center;
   border: 2px solid #66CD00;
   border-radius: 500px;
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   background-color: white;
 }
 
-.bigfoot-image{
+.category-image{
   margin-top: 27px;
-  width: 70%;
-  height: 70%;
+  width: 60%;
+  height: 60%;
+}
+
+.tupac-image{
+  margin-top: 27px;
+  width: 40%;
+  height: 60%;
+}
+
+.category-image-container: active{
+  background-color: #66CD00;
 }
 
 .hidden {

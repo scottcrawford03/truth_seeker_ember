@@ -1,9 +1,8 @@
-<h1>THESE ARE THE TRUTHS</h1>
-<div class="images">
+<div class="col-md-2 images">
   {{#each model as |category|}}
   {{#link-to 'truth' category}}
-  <div class="{{category}}-image-container">
-    <img class="{{category}}-image" src="/assets/images/{{category}}.jpg"/>
+  <div class="category-image-container">
+    <img class="{{category}}-image category-image" src="/assets/images/{{category}}.png"/>
   </div>
   {{/link-to}}
   {{/each}}
