@@ -1,5 +1,11 @@
-{{truth-map latitude="37.8282" longitude="-98.5795" truths=matchingPosts category=category}}
+{{truth-map latitude="37.8282" longitude="-98.5795" truths=matchingPosts category=category selectedTruth=selectedTruth}}
 
+{{#if selectedTruth}}
+<div>
+  <h3>{{selectedTruth.text}}</h3>
+  <img class="selected-image" src="{{selectedTruth.image}}">
+</div>
+{{/if}}
 
 <div class="truth-posts">
   <h1>{{category}}</h1>
