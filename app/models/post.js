@@ -6,4 +6,5 @@ export default DS.Model.extend({
   text: DS.attr('string'),
   lat: DS.attr('number'),
   long: DS.attr('number'),
+  image: DS.attr('string')
 });

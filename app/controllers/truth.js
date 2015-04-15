@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
   searchTerm: '',
 
   category: function () {
-    return this.get('model.firstObject.category')
+    return this.get('model.firstObject.category');
   }.property('model'),
 
   matchingPosts: function () {

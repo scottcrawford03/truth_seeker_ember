@@ -4,6 +4,8 @@ export default Ember.Component.extend({
   classNames: ['map-canvas'],
   markers: [],
 
+  selectedTruth: null,
+
   insertMap: function() {
     var container = this.$()[0];
 
@@ -56,7 +58,14 @@ export default Ember.Component.extend({
           truth.get('long')),
       map: this.get('map'),
       title: truth.get('text'),
-      icon: icon
+      animation: google.maps.Animation.DROP,
+      icon: icon,
+      truth: truth,
+      component: this
+    });
+
+    marker.addListener('click', function () {
+      this.component.set('selectedTruth', truth);
     });
     this.markers.pushObject(marker);
   },
@@ -67,7 +76,7 @@ export default Ember.Component.extend({
       "elementType": "all",
       "stylers": [
         {
-          "color": "#191919"
+          "color": "#758074"
         },
         {
           "visibility": "on"
