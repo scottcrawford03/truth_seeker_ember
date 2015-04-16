@@ -6,7 +6,10 @@ const url = ENV.apiUrl;
 export default Ember.Route.extend({
   model: function () {
     return $.getJSON(`${url}/api/v1/categories`).then( (data) => {
-      return data.categories.map( (category) => category );
+      return data.categories.map( (category) => {
+        category.imageName = `/assets/images/${category.name.toLowerCase()}.png`;
+        return category;
+      } );
     });
   }
 });

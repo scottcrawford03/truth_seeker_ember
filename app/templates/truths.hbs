@@ -3,7 +3,7 @@
     {{#each model as |category|}}
     {{#link-to 'truth' category.name}}
     <div class="category-image-container">
-      <img class="{{category.name}}-image category-image" src="/assets/images/{{category.name}}.png"/>
+      <img class="{{category.name}}-image category-image" src="{{category.imageName}}"/>
     </div>
     {{/link-to}}
     {{/each}}
