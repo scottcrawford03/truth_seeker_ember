@@ -1,13 +1,68 @@
 <div class="row">
-  <div class="col-xs-9">
+  <div class="col-xs-9 text-left bios">
+
     {{truth-map latitude="37.8282" longitude="-98.5795" defaultTruth=currentPost truths=matchingPosts category=category selectedTruth=selectedTruth}}
-    <h1>{{category}}</h1>
-    <p>
-      <span class="bold">What they want you to believe:</span> {{category.falsity}}
-    </p>
-    <p>
-      <span class="bold">The truth:</span> {{category.truth}}
-    </p>
+
+    {{#if isElvis}}
+      <h3 class="text-center">Elvis Has Not Left the Building</h3>
+      <p>
+        <span class="bold">What they want you to believe:</span> Elvis died on August 16, 1977. The coroner claimed he passed away from cardiac arrhythmia, possibly caused by an overdose of prescription pills.
+      </p>
+      <p>
+        <span class="bold">The truth:</span> Elvis has been spotted by numerous witnesses since his alleged death. Several of his friends are still in contact with him. And if he hadn't known he was going to die, he would have ordered some sparkly gold suits for his concert tour--but he didn't.
+      </p>
+    {{/if}}
+    {{#if isBigfoot}}
+      <h3 class="text-center">Bigfoot Walks Among Us</h3>
+      <p>
+        <span class="bold">What they want you to believe:</span> Some people just have
+        big feet and like to wander around the woods in ape costumes. It’s perfectly
+        normal!
+      </p>
+      <p>
+        <span class="bold">The truth:</span> Between centuries of sightings, video
+        footage, footprints left in the mud, and the possibility that Bigfoot can
+        slip in and out of the space/time continuum, how can he not be real?
+      </p>
+    {{/if}}
+    {{#if isUFO}}
+      <h3 class="text-center">UFOs are Not Just Weather Balloons</h3>
+      <p>
+        <span class="bold">What they want you to believe:</span> We are alone in
+        this universe. Very, very alone.
+      </p>
+      <p>
+        <span class="bold">The truth:</span> Aliens have been flying their
+        spaceships around our planet since the beginning of time. Maybe your
+        neighbor is an alien, as part of some student exchange problem?
+      </p>
+    {{/if}}
+    {{#if isGhost}}
+      <h3 class="text-center">Ghosts...Did You Hear That?</h3>
+      <p>
+        <span class="bold">What they want you to believe:</span> That wisp of
+        something you saw, or that voice you heard calling out in the night can easily
+        be explained by your imagination, or the howling wind.
+      </p>
+      <p>
+        <span class="bold">The truth:</span> Some people are restless, some have
+        post-mortem agendas, and some are just in denial that they ever died at
+        all. Feel that drop in temperature? See that light flicker? They're heeeerrreee!
+      </p>
+    {{/if}}
+    {{#if isTupac}}
+      <h3 class="text-center">Tupac: Still Livin' the Thug Life</h3>
+      <p>
+        <span class="bold">What they want you to believe:</span> Tupac Shakur was shot
+        on September 7, 1996, and passed away in Las Vegas a week later from internal
+        bleeding.
+      </p>
+      <p>
+        <span class="bold">The truth:</span> Alive and well in Cuba, and probably still
+        making albums and recording footage that is later compiled into holograms to
+        be played at music festivals.
+      </p>
+    {{/if}}
   </div>
   <div class="col-xs-3 text-left truth-posts">
     {{#if selectedTruth}}
@@ -21,13 +76,5 @@
         <h4>{{defaultPost.text}}</h4>
       </div>
     {{/if}}
-    <!-- <div> -->
-      <!-- {{input type="text" class="filter-search" value=searchTerm}} -->
-      <!-- each matchingPosts as |post|}}
-        truth-post post=post}}
-      each}} -->
-      <!-- <img class="selected-image" src="{{currentPost.image}}">
-      <p>{{currentPost.text}}</p>
-    </div> -->
   </div>
 </div>

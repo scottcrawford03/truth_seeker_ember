@@ -40,6 +40,20 @@ body {
   font-size: 20px;
 }
 
+@-webkit-keyframes greenPulse {
+  from { text-shadow: 0 0 29px #333; }
+  50% { text-shadow: 0 0 68px #66CD00; }
+  to { text-shadow: 0 0 19px #333; }
+}
+
+.index-message {
+  margin-top: 200px;
+  word-spacing: -10px;
+  -webkit-animation-name: greenPulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+
 .category-image-container{
   margin-left: 20px;
   margin-top: 10px;
@@ -77,10 +91,25 @@ body {
   display: none;
 }
 
+.bios p {
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+}
+
+.bios h3 {
+  color: white;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 .truth-posts{
   margin-top: 15px;
   padding-right: 55px;
   word-wrap: break-word;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
 }
 
 .filter-search{
