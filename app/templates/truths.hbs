@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-xs-2 images">
     {{#each model as |category|}}
-    {{#link-to 'truth' category.name}}
+    {{#link-to 'category' category.posts}}
     <div class="category-image-container">
       <img class="{{category.name}}-image category-image" src="/assets/images/{{category.name}}.png"/>
     </div>

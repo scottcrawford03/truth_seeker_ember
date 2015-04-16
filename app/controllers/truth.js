@@ -3,10 +3,12 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   needs: "truth",
 
+  category: Ember.computed.alias('model.firstObject.category'),
+
   searchTerm: '',
 
   category: function () {
-    return this.get('model.firstObject.category');
+    return this.get('category');
   }.property('model'),
 
   matchingPosts: function () {
@@ -17,9 +19,7 @@ export default Ember.Controller.extend({
     return this.get('model.firstObject');
   }.property('model'),
 
-  isElvis: function () {
-    return this.get('model.firstObject.category') === "Elvis"
-  }.property('model'),
+  isElvis: Ember.computed.equal('category', 'Elvis'),
 
   isUFO: function () {
     return this.get('model.firstObject.category') === "UFO"
