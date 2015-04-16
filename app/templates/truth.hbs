@@ -1,16 +1,20 @@
-{{truth-map latitude="37.8282" longitude="-98.5795" truths=matchingPosts category=category selectedTruth=selectedTruth}}
-
-{{#if selectedTruth}}
-<div>
-  <h3>{{selectedTruth.text}}</h3>
-  <img class="selected-image" src="{{selectedTruth.image}}">
-</div>
-{{/if}}
-
-<div class="truth-posts">
-  <h1>{{category}}</h1>
-  {{input type="text" class="filter-search" value=searchTerm}}
-  {{#each matchingPosts as |post|}}
-    {{truth-post post=post}}
-  {{/each}}
+<div class="row">
+  <div class="col-xs-9">
+    {{truth-map latitude="37.8282" longitude="-98.5795" truths=matchingPosts category=category selectedTruth=selectedTruth}}
+    <h1>{{category}}</h1>
+  </div>
+  <div class="col-xs-3 text-left">
+    {{#if selectedTruth}}
+      <div>
+        <img class="selected-image" src="{{selectedTruth.image}}">
+        <h4>{{selectedTruth.text}}</h4>
+      </div>
+    {{/if}}
+    <div class="truth-posts">
+      <!-- {{input type="text" class="filter-search" value=searchTerm}} -->
+      {{#each matchingPosts as |post|}}
+        {{truth-post post=post}}
+      {{/each}}
+    </div>
+  </div>
 </div>

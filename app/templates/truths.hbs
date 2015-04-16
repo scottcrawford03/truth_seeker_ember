@@ -9,12 +9,14 @@
     {{/each}}
   </div>
   <div class="col-xs-10 header text-center">
-  {{#link-to 'truths'}}
-    <h1 id="title">TRUTH SEEKER</h1>
-    <h4 id="tagline">THE PEOPLE NEED TO KNOW</h4>
-  {{/link-to}}
-  <div class="text-left">
-    {{outlet}}
-  </div>
+    <div class="row">
+      <div class="col-xs-9">
+        {{#link-to 'truths'}}
+          <h1 id="title">TRUTH SEEKER</h1>
+          <h4 id="tagline">THE PEOPLE NEED TO KNOW</h4>
+        {{/link-to}}
+      </div>
+      {{outlet}}
+    </div>
   </div>
 </div>
