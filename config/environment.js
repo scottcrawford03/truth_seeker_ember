@@ -47,7 +47,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.apiUrl = '//developer-truth-seeker.herokuapp.com'
   }
 
   ENV.mapStyles = [
