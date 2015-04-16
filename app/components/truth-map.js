@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   classNames: ['map-canvas'],
   markers: [],
 
-  selectedTruth: null,
+  selectedTruth: "",
 
   insertMap: function() {
     var container = this.$()[0];
@@ -63,6 +63,8 @@ export default Ember.Component.extend({
       truth: truth,
       component: this
     });
+
+
 
     marker.addListener('click', function () {
       this.component.set('selectedTruth', truth);

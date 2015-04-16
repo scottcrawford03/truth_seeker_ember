@@ -1,20 +1,33 @@
 <div class="row">
   <div class="col-xs-9">
-    {{truth-map latitude="37.8282" longitude="-98.5795" truths=matchingPosts category=category selectedTruth=selectedTruth}}
+    {{truth-map latitude="37.8282" longitude="-98.5795" defaultTruth=currentPost truths=matchingPosts category=category selectedTruth=selectedTruth}}
     <h1>{{category}}</h1>
+    <p>
+      <span class="bold">What they want you to believe:</span> {{category.falsity}}
+    </p>
+    <p>
+      <span class="bold">The truth:</span> {{category.truth}}
+    </p>
   </div>
-  <div class="col-xs-3 text-left">
+  <div class="col-xs-3 text-left truth-posts">
     {{#if selectedTruth}}
       <div>
         <img class="selected-image" src="{{selectedTruth.image}}">
         <h4>{{selectedTruth.text}}</h4>
       </div>
+    {{else}}
+      <div>
+        <img class="selected-image" src="{{defaultPost.image}}">
+        <h4>{{defaultPost.text}}</h4>
+      </div>
     {{/if}}
-    <div class="truth-posts">
+    <!-- <div> -->
       <!-- {{input type="text" class="filter-search" value=searchTerm}} -->
-      {{#each matchingPosts as |post|}}
-        {{truth-post post=post}}
-      {{/each}}
-    </div>
+      <!-- each matchingPosts as |post|}}
+        truth-post post=post}}
+      each}} -->
+      <!-- <img class="selected-image" src="{{currentPost.image}}">
+      <p>{{currentPost.text}}</p>
+    </div> -->
   </div>
 </div>

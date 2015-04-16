@@ -17,5 +17,9 @@ export default Ember.Controller.extend({
       });
     }
     return this.get('model');
-  }.property('searchTerm', 'model')
+  }.property('searchTerm', 'model'),
+
+  defaultPost: function () {
+    return this.get('model.firstObject');
+  }.property('model')
 });
