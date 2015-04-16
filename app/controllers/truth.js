@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  needs: "truth",
 
   searchTerm: '',
 
@@ -9,13 +10,30 @@ export default Ember.Controller.extend({
   }.property('model'),
 
   matchingPosts: function () {
-    let searchTerm = this.get('searchTerm').toLowerCase();
-    if (searchTerm) {
-      return this.get('model').filter( (post) => {
-        if (!post.get('text')) return false;
-        return post.get('text').toLowerCase().indexOf(searchTerm) > -1;
-      });
-    }
     return this.get('model');
-  }.property('searchTerm', 'model')
+  }.property('model'),
+
+  defaultPost: function () {
+    return this.get('model.firstObject');
+  }.property('model'),
+
+  isElvis: function () {
+    return this.get('model.firstObject.category') === "Elvis"
+  }.property('model'),
+
+  isUFO: function () {
+    return this.get('model.firstObject.category') === "UFO"
+  }.property('model'),
+
+  isTupac: function () {
+    return this.get('model.firstObject.category') === "Tupac"
+  }.property('model'),
+
+  isGhost: function () {
+    return this.get('model.firstObject.category') === "Ghost"
+  }.property('model'),
+
+  isBigfoot: function () {
+    return this.get('model.firstObject.category') === "Bigfoot"
+  }.property('model'),
 });
